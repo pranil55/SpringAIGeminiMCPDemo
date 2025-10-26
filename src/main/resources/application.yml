@@ -1,0 +1,33 @@
+logging:
+  level:
+    io:
+      modelcontextprotocol:
+        client: DEBUG
+        spec: DEBUG
+
+spring:
+  application:
+    name: spring-boot-ai-gemini-integration
+  ai:
+    openai:
+      api-key: "api-key"
+      base-url: https://generativelanguage.googleapis.com/v1beta/openai
+      chat:
+        completions-path: /chat/completions
+        options:
+          model: gemini-2.0-flash-exp
+    mcp:
+      client:
+        toolcallback:
+          enabled: true
+        stdio:
+          connections:
+            filesystem:
+              command: "cmd"
+              args:
+                - "/c"
+                - "npx -y @modelcontextprotocol/server-filesystem"
+                - "C:/Users/prani/Desktop"
+                - "C:/Users/prani/Downloads"
+              env:
+                BRAVE_API_KEY: ${BRAVE_API_KEY}}
