@@ -1,4 +1,4 @@
-package com.bootcamptoprod.controller;
+package com.springAIGeminiMCPDemo.controller;
 
 
 import org.springframework.ai.chat.client.ChatClient;

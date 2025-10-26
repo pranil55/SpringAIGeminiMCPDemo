@@ -1,4 +1,4 @@
-package com.bootcamptoprod.config;
+package com.springAIGeminiMCPDemo.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.tool.ToolCallbackProvider;
